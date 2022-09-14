@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+        <title>XXX</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <span style="color: red;">{{error_msg}}</span>
+        <br>
+        <select name="operator">
+            <option value="Vysehrad" {% if request.POST.operator == "Vysehrad" %} selected {% endif %}>Vyšehrad</option>
+        </select>
+        <input type="submit"><br>
+        {{vysledek}}
+    </form>
+</body>
+</html>
